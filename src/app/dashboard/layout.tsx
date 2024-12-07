@@ -7,17 +7,17 @@ import { SidebarTrigger } from '@/components/ui/sidebar'
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
     return (
         <SidebarProvider>
-            <div className="flex h-screen overflow-hidden w-full">
+            <div className="flex h-screen w-full">
                 <AppSidebar />
-                <div className="flex flex-col flex-1 overflow-hidden">
-                    <DashboardHeader>
+                <div className="flex flex-col flex-1">
+                    <DashboardHeader className="sticky top-0 z-10">
                         <SidebarTrigger />
                     </DashboardHeader>
-                    <main className="flex-1 overflow-y-auto p-6">
+                    <div className="">
                         {children}
-                    </main>
+                    </div>
                 </div>
             </div>
         </SidebarProvider>
     )
-} 
+}

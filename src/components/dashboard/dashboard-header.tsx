@@ -1,15 +1,24 @@
 import { ReactNode } from "react"
 import { UserDropdown } from "@/components/dashboard/user-dropdown"
+import { ThemeToggle } from "@/components/ui/theme-toggle"
+import { cn } from "@/lib/utils"
 
-export function DashboardHeader({ children, title = "Dashboard" }: { children: ReactNode, title?: string }) {
+interface DashboardHeaderProps {
+    children: ReactNode;
+    className?: string;
+}
+
+export function DashboardHeader({ children, className }: DashboardHeaderProps) {
     return (
-        <header className="flex h-16 items-center gap-4 border-b bg-gray-100/40 px-6">
+        <header className={cn(
+            "flex h-16 items-center gap-4 border-b border-zinc-200 dark:border-zinc-800 bg-gray-100/80 dark:bg-black/80 backdrop-blur-sm px-6 transition-colors duration-200",
+            className
+        )}>
             {children}
-            <h1 className="text-lg font-semibold">{title}</h1>
             <div className="ml-auto flex items-center gap-4">
+                <ThemeToggle />
                 <UserDropdown />
             </div>
         </header>
     )
 }
-
