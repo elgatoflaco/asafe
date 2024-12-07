@@ -11,7 +11,7 @@ interface DashboardHeaderProps {
 export function DashboardHeader({ children, className }: DashboardHeaderProps) {
     return (
         <header className={cn(
-            "flex h-16 items-center gap-4 border-b border-zinc-200 dark:border-zinc-800 bg-gray-100/80 dark:bg-black/80 backdrop-blur-sm px-6 transition-colors duration-200",
+            "sticky top-0 z-50 flex min-h-[64px] h-16 items-center gap-4 border-b border-zinc-200 dark:border-zinc-800 bg-gray-100/80 dark:bg-black/80 backdrop-blur-sm px-6 transition-colors duration-200",
             className
         )}>
             {children}

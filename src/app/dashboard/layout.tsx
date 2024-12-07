@@ -9,11 +9,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         <SidebarProvider>
             <div className="flex h-screen w-full">
                 <AppSidebar />
-                <div className="flex flex-col flex-1">
-                    <DashboardHeader className="sticky top-0 z-10">
+                <div className="flex-1 flex flex-col overflow-hidden">
+                    <DashboardHeader className="flex-shrink-0">
                         <SidebarTrigger />
                     </DashboardHeader>
-                    <div className="">
+                    <div className="flex-1 overflow-y-auto">
                         {children}
                     </div>
                 </div>

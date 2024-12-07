@@ -1,9 +1,20 @@
+import { Suspense } from "react"
+import { DashboardShell } from "@/components/dashboard/dashboard-shell"
+import { StatisticsCards } from "@/components/dashboard/stats/stadistics-cards"
+import { StatisticsCardsSkeleton } from "@/components/dashboard/stats/stadistics-skeleton"
+import { PokemonStats } from "@/components/dashboard/stats/pokemon-stats"
+import { PokemonStatsSkeleton } from "@/components/dashboard/stats/pokemon-stats-skeleton"
 
 export default function Dashboard() {
     return (
-        <div className="flex flex-col items-center justify-center  p-8 pb-20 gap-16 sm:p-20">
-            <h1 className="text-4xl font-bold">Dashboard</h1>
-        </div>
+        <DashboardShell>
+            <Suspense fallback={<StatisticsCardsSkeleton />}>
+                <StatisticsCards />
+            </Suspense>
+            <Suspense fallback={<PokemonStatsSkeleton />}>
+                <PokemonStats id={1} />
+            </Suspense>
+        </DashboardShell>
     )
 }
 
