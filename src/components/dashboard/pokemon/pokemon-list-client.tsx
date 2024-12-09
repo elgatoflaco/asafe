@@ -75,6 +75,14 @@ export function PokemonListClient({
                     </TableBody>
                 </Table>
             </div>
+            <div
+                aria-live="polite"
+                role="status"
+                aria-label="Información de paginación"
+                className="text-sm sm:text-base"
+            >
+                Mostrando {(page - 1) * pageSize + 1} - {Math.min(page * pageSize, totalCount)} de {totalCount} Pokémon
+            </div>
             <div className="mt-4">
                 <Pagination
                     currentPage={page}

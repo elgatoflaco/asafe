@@ -1,5 +1,7 @@
 export interface Pokemon {
+  id: number;
   name: string;
+  types: string[];
   sprite: string;
 }
 
@@ -54,4 +56,13 @@ export interface PokemonListClientProps {
 export interface PokemonListParams {
   page: number;
   pageSize: number;
+}
+
+export interface TypePokemon {
+  pokemon: {
+    pokemon: {
+      name: string;
+      url: string;
+    };
+  }[];
 }

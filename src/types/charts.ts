@@ -1,3 +1,4 @@
+import { LucideIcon } from "lucide-react";
 import { ReactNode } from "react";
 
 export interface BarChartProps {
@@ -26,4 +27,10 @@ export interface ChartContainerProps {
     width: number;
     height: number;
   };
+}
+export interface Stat {
+  title: string;
+  value: string;
+  icon: LucideIcon;
+  description: string;
 }
