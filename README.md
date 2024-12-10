@@ -1,11 +1,11 @@
 ¡Claro! Aquí está el README actualizado en español:
 
 ```markdown
-# 🌟 Documentación del Proyecto Pokémon App
+# 🌟 Documentación del Prueba técnica ASAFE Digital.
 
 ## 📋 Descripción General
 
-Aplicación web moderna construida con Next.js 14 que sirve como visualizador de Pokémon, implementando características avanzadas como autenticación, manejo de estado, visualización de datos y pruebas automatizadas. El proyecto demuestra las mejores prácticas en desarrollo web moderno.
+Aplicación web moderna construida con Next.js 14 que sirve como visualizador de Pokémon, implementando características avanzadas como autenticación, manejo de estado, visualización de datos y pruebas automatizadas.
 
 ## 🚀 Características Principales
 
@@ -21,7 +21,6 @@ Aplicación web moderna construida con Next.js 14 que sirve como visualizador de
 - Visualización de estadísticas de Pokémon
 - Gráficos interactivos con D3.js
 - Tablas de datos paginadas
-- Filtros y búsqueda avanzada
 
 ### 📱 Interfaz de Usuario
 
@@ -47,7 +46,6 @@ Aplicación web moderna construida con Next.js 14 que sirve como visualizador de
 - Jest para pruebas unitarias
 - React Testing Library
 - Cypress para pruebas E2E
-- Cobertura de código
 
 ### Herramientas de Desarrollo
 
@@ -142,22 +140,6 @@ src/
 ├── unit/ # Tests unitarios
 └── setup/ # Configuración de tests
 
-src/
-├── app/ # Rutas y páginas
-│ ├── dashboard/ # Área protegida
-│ ├── login/ # Autenticación
-│ └── layout.tsx # Layout principal
-│
-├── components/ # Componentes React
-│ ├── ui/ # Componentes base
-│ ├── charts/ # Visualizaciones D3
-│ └── dashboard/ # Componentes específicos
-│
-├── hooks/ # Custom hooks
-├── services/ # Servicios y API
-├── types/ # TypeScript types
-└── lib/ # Utilidades
-
 ````
 
 ## 🔧 Configuración del Proyecto
@@ -171,7 +153,7 @@ src/
 
 ```bash
 # Clonar el repositorio
-git clone git@github.com:usuario/pokemon-app.git
+git clone git@github.com:elgatoflaco/asafe.git
 
 # Instalar dependencias
 npm install
@@ -202,29 +184,9 @@ npm run test:e2e
 
 - Carga de imágenes optimizada con next/image
 - Lazy loading de componentes
-- Caching de datos con SWR
 - Compresión de assets
-
-### SEO y Accesibilidad
-
-- Meta tags dinámicos
-- Semantic HTML
-- ARIA labels
-- Keyboard navigation
-
-### Seguridad
-
-- Headers de seguridad
-- Sanitización de inputs
-- Protección CSRF
-- Rate limiting
-
-## 📱 Responsive Design
-
-- Breakpoints personalizados
-- Mobile-first approach
-- Optimizaciones touch
-- Menú adaptativo
+- Caché
+- Importación dinámica de componentes
 
 ## 📄 Licencia
 
@@ -232,5 +194,4 @@ Este proyecto está bajo la Licencia MIT.
 
 ```
 
-Este README ha sido actualizado basándome en los archivos del proyecto, incluyendo las nuevas características y configuraciones que se muestran en el código fuente.
 ```
