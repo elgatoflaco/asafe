@@ -1,5 +1,4 @@
-import * as d3 from "d3";
-import { memo, useEffect, useState, type ReactNode } from "react";
+import { memo, } from "react";
 
 import { ChartContainerProps } from "@/types/charts";
 

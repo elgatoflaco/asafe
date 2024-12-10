@@ -66,3 +66,9 @@ export interface TypePokemon {
     };
   }[];
 }
+
+export interface TypePokemonResponse {
+  pokemon: Array<{
+    pokemon: PokemonType;
+  }>;
+}

@@ -6,13 +6,13 @@ import {
   setPokemonTypeData,
 } from "./transformers/pokemon";
 import {
-  Pokemon,
   ApiPokemon,
   PokemonStat,
   PokemonType,
   PokemonStatResponse,
   PokemonTypeWithCount,
   PokemonListResponse,
+  TypePokemonResponse,
 } from "@/types/pokemon";
 import { ApiListResponse } from "@/types/api";
 
@@ -69,7 +69,7 @@ export async function getPokemonTypeStats(): Promise<PokemonTypeWithCount[]> {
     );
 
     const typesData = await Promise.all(
-      results.map((type) => fetchApi<{ pokemon: any[] }>(type.url))
+      results.map((type) => fetchApi<TypePokemonResponse>(type.url))
     );
 
     return setPokemonTypeData(typesData, results);

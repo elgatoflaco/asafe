@@ -1,4 +1,4 @@
-import { memo, useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 
 export const useChartDimensions = (
   containerRef: React.RefObject<HTMLDivElement>,
@@ -36,11 +36,3 @@ export const useChartDimensions = (
 
   return dimensions;
 };
-
-interface ChartContainerProps {
-  children: ReactNode;
-  dimensions: {
-    width: number;
-    height: number;
-  };
-}

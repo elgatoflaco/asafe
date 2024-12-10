@@ -1,4 +1,4 @@
-import { Home, BarChart2, Users } from "lucide-react";
+import { Home, Users } from "lucide-react";
 import { MenuItem } from "@/types/dashboard";
 
 export const MENU_ITEMS: MenuItem[] = [
