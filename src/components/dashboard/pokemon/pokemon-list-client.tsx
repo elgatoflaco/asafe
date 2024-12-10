@@ -25,14 +25,18 @@ export function PokemonListClient({
                 <Select
                     value={pageSize.toString()}
                     onValueChange={handlePageSizeChange}
-                    aria-label="Seleccionar cantidad de Pokémon por página"
+                    data-testid="page-size-select"
                 >
                     <SelectTrigger className="w-full sm:w-[180px]">
                         <SelectValue placeholder="Seleccionar tamaño de página" />
                     </SelectTrigger>
                     <SelectContent>
                         {[10, 20, 50, 100].map(size => (
-                            <SelectItem key={size} value={size.toString()}>
+                            <SelectItem
+                                key={size}
+                                value={size.toString()}
+                                data-value={size.toString()}
+                            >
                                 {size} por página
                             </SelectItem>
                         ))}
