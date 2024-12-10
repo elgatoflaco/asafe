@@ -6,8 +6,9 @@ dotenv.config();
 export default defineConfig({
   e2e: {
     baseUrl: "https://localhost:3000",
-    supportFile: "cypress/support/e2e.ts",
-    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    supportFile: "src/__tests__/e2e/support/e2e.ts",
+    specPattern: "src/__tests__/e2e/**/*.cy.{js,jsx,ts,tsx}",
+    fixturesFolder: "src/__tests__/e2e/fixtures",
     viewportWidth: 1280,
     viewportHeight: 720,
     video: false,
